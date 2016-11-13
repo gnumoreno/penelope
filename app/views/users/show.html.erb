@@ -11,10 +11,13 @@
   </aside>
 </div>
 <div class="row">
+  <% if current_user && (current_user.admin? || current_user.editor?) %>
+    <%= link_to "User List", users_path %> </br>
+  <% end %>
   <% if logged_in? %>
-    <li> <%= link_to "Edit", edit_user_path %> </li>
-    <li> <%= link_to "Log out", logout_path, method: "delete" %> </li>
+    <%= link_to "Edit", edit_user_path %> </br>
+    <%= link_to "Log out", logout_path, method: "delete" %> </br>
   <% else %>
-    <li> <%= link_to "Log in", login_path %> </li>
+    <%= link_to "Log in", login_path %> </br>
   <% end %>
 </div>

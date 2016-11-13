@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  
+  before_action :correct_user, only: [:edit, :update]
+
   def new
     @user = User.new
   end
@@ -7,9 +8,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      log_in @user
-      flash[:success] = "Welcome to Penelope!"
-      redirect_to @user
+      @user.send_activation_email
+      flash[:info] = "Please check your email to activate your account."
+      redirect_to root_url
     else
       render 'new'
     end
@@ -51,6 +52,7 @@ class UsersController < ApplicationController
   
   def logged_in_user
     unless logged_in?
+      store_location
       flash[:danger] = "Please log in."
       redirect_to login_url
     end
@@ -59,7 +61,7 @@ class UsersController < ApplicationController
   def correct_user
     @user = User.find(params[:id])
     unless @user == current_user
-      flash[:danger] = "You can't view or update other users, Smartass!"
+      flash[:danger] = "You can't update other users, Smartass!"
       redirect_to @user
     end
   end
@@ -71,7 +73,7 @@ class UsersController < ApplicationController
   
   def editor_user
     @user = current_user
-    redirect_to @user unless current_user.edit?
+    redirect_to @user unless current_user.editor?
   end
   
 end
