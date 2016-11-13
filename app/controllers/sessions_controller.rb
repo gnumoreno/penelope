@@ -1,6 +1,12 @@
 class SessionsController < ApplicationController
   
   def new
+    if logged_in?
+      @user = current_user
+      redirect_to @user 
+    else
+      render 'new'
+    end
   end
   
   def create
@@ -11,7 +17,7 @@ class SessionsController < ApplicationController
       remember user
       redirect_to user
     else
-      flash.now[:danger] = 'Invalid email/password combination' # Not quite right!
+      flash.now[:danger] = 'Invalid email/password combination'
       render 'new'
     end
   end
