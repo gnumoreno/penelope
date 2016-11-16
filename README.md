@@ -39,7 +39,7 @@
 `git commit -a -m "Whatever-I-did-with-my-code"`  
 
 ### This is going to push all the code to the remote repository. Be CAREFUL
-`git push
+`git push`  
 
 ### Merge to master branch and delete branch after merging.
 `git checkout master`  
@@ -54,6 +54,6 @@
 `heroku create`  
 `git push heroku master`  
 
-[Moreno dev app](https://penelope-gnumoreno.c9users.io/)
+[Moreno dev app](https://penelope-gnumoreno.c9users.io/)  
 [Moreno test app](https://lit-garden-89375.herokuapp.com/)
 
