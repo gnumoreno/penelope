@@ -3,8 +3,8 @@
 
 ### If you are doing this in your machine start here
 
- * rvm install 2.3.0
- * rvm use 2.3.0
+ `rvm install 2.3.0`
+`rvm use 2.3.0`
  * rvm gemset create rails5001
  * rvm 2.3.0@rails5001 --default
  * gem install rails -v 5.0.0.1
