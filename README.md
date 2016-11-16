@@ -13,9 +13,9 @@
 ### If you are doing this from cloud9 start here
 
 <code>
-git config --global user.name "<Your Name>"
-git config --global user.email "<your.email@example.com>"
-cat ~/.ssh/id_rsa.pub
+git config --global user.name "<Your Name>" <br />
+git config --global user.email "<your.email@example.com>" <br />
+cat ~/.ssh/id_rsa.pub <br />
 </code>
 
 ### Add the key to your github profile https://github.com/settings/keys
