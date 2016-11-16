@@ -41,6 +41,8 @@
 ### This is going to push all the code to the remote repository. Be CAREFUL
 `git push`  
 
+### Create a pull request on github, let your peers review your code and test functionality. After the review, you can merge (see next step)
+
 ### Merge to master branch and delete branch after merging.
 `git checkout master`  
 `git merge "whatever-Im-working"`  
