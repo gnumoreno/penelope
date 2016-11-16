@@ -1,4 +1,4 @@
-### from https://www.railstutorial.org/book/beginning#cha-beginning
+[Tutorial Here](https://www.railstutorial.org/book/beginning#cha-beginning)
 ### Don't be an idiot. Whatever is marked "something" should be replaced by YOUR data.
 
 ### If you are doing this in your machine start here
@@ -13,7 +13,7 @@
 ### If you are doing this from cloud9 start here
 
 
- * git config --global user.name "Your-Name>"
+ * git config --global user.name "Your-Name"
  * git config --global user.email "your.email@example.com"
  * cat ~/.ssh/id_rsa.pub
 
@@ -28,7 +28,7 @@
 
 ### Branch, Edit, Commit, Merge, Push
 
- * git checkout -b <whatever-Im-working>
+ * git checkout -b "whatever-Im-working"
  * git branch
 
 ## Work on your freaking code.
@@ -36,15 +36,15 @@
 ### Commit
 
  * git status
- * git commit -a -m "<Whatever-I-did-with-my-code>"
+ * git commit -a -m "Whatever-I-did-with-my-code"
 
 ### This is going to push all the code to the remote repository. Be CAREFUL
  * git push
 
 ### Merge to master branch and delete branch after merging.
  * git checkout master
- * git merge <whatever-Im-working>
- * git branch -d <whatever-Im-working>
+ * git merge "whatever-Im-working"
+ * git branch -d "whatever-Im-working"
 
 
 ### ================= Do not use - only for Moreno =================
