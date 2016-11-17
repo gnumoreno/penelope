@@ -6,7 +6,7 @@ class BooksController < ApplicationController
   
   def create
     @user = current_user
-    @book = @user.books.create    
+    @book = @user.books.create(user_params)
     if @book.save
       flash[:info] = "Book created"
       redirect_to root_url
