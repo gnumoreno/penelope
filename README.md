@@ -21,6 +21,7 @@
 
 `git clone git@github.com:gnumoreno/penelope.git`  
 `cd penelope/`  
+`sudo apt-get install nodejs`  
 `bundle install` *If you get an error to install "pg" run this first:* `sudo apt-get install libpq-dev`  
 `rake db:migrate`  
 `rake db:seed`  
@@ -58,4 +59,3 @@
 
 [Moreno dev app](https://penelope-gnumoreno.c9users.io/)  
 [Moreno test app](https://lit-garden-89375.herokuapp.com/)
-
