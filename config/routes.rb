@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'static_pages/help'
+  get 'static_pages/about'
+  get 'static_pages/about'
+  get 'static_pages/news'
+  get 'static_pages/contact'
   get 'password_resets/new'
-
   get 'password_resets/edit'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -9,7 +13,7 @@ Rails.application.routes.draw do
   resources :sessions
   resources :account_activations, only: [:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
-  
+
   root 'sessions#new'
 
   get  '/signup',  to: 'users#new'
