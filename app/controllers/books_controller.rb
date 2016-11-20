@@ -10,7 +10,7 @@ class BooksController < ApplicationController
     @book = @user.books.create(user_params)
     if @book.save
       flash[:sucess] = "Book created"
-      redirect_to root_url
+      redirect_to books_url
     else
       render 'new'
     end
@@ -19,7 +19,7 @@ class BooksController < ApplicationController
   def destroy
     @book.destroy
     flash[:sucess] = "Book deleted"
-    redirect_to root_url
+    redirect_to books_url
   end
   
   def show

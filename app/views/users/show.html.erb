@@ -15,16 +15,6 @@
   <% if current_user && (current_user.admin? || current_user.editor?) %>
     <%= link_to "User List", users_path %> </br>
   <% end %>
-<<<<<<< HEAD
+  <%= link_to "My Books", books_path %> </br>
+  <%= link_to "New Book", new_book_path %> </br>
 </div>
-=======
-  <% if logged_in? %>
-    <%= link_to "Edit My Profile", edit_user_path %> </br>
-    <%= link_to "New Book", new_book_path %>
-    <%= link_to "List Books", books_path(@user) %> </br>
-    <%= link_to "Log out", logout_path, method: "delete" %> </br>
-  <% else %>
-    <%= link_to "Log in", login_path %> </br>
-  <% end %>
-</div>
->>>>>>> create-books
