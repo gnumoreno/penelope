@@ -1,0 +1,10 @@
+<% provide(:title, 'Your Books') %>
+<h1> <%= @user.name %>'s Books </h1>
+
+<ul class="books">
+<% @user.books.each do |book| %>
+  <%= link_to book.title, edit_book_path(book) %>
+  <%= book.pages %> </br>
+<% end %> </br>
+<%= link_to "My Profile", user_url(@user) %>
+</ul>
